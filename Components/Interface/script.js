@@ -8,16 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function handleClick(event) {
-    console.log(event.target)
-
     let square = event.target;
     let position = square.id;
 
-    let div = document.querySelector(".background");
-
     if (handleMove(position)) {        
         setTimeout(() => {
-            div.style.display = 'flex';
+            winner();
         }, 15);
     };
     updateSquare(position);
@@ -26,6 +22,5 @@ function handleClick(event) {
 function updateSquare(position) {
     let square = document.getElementById(position.toString());
     let symbol = board[position];
-    square.innerHTML = `<div class='${symbol}'></div>`
+    square.innerHTML = `<div class='${symbol}'></div>`;
 }
-

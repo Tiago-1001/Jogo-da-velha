@@ -130,7 +130,7 @@ h1 {
        
     }
 
-    .winner {
+    .winnerplayerO {
         position: relative;
         display: flex;
         align-items: center;
@@ -140,6 +140,31 @@ h1 {
         &:after {
             position: absolute;
             content: '\1F9DB';
+            font-size: 5.5rem;
+        }
+    
+        @media (max-width: 768px) {
+    
+    
+            &:after {
+                font-size: 2.5rem;
+                line-height: 5.25rem;
+                left: 20%;
+            }
+        }
+    
+    }
+
+    .winnerplayerX {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    
+        &:after {
+            position: absolute;
+            content: '\1F9D9';
             font-size: 5.5rem;
         }
     

@@ -152,7 +152,7 @@ h1 {
   bottom: 75%;
 }
 
-.youWin .winner {
+.youWin .winnerplayerO {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,14 +166,42 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.youWin .winner:after {
+.youWin .winnerplayerO:after {
   position: absolute;
   content: '\1F9DB';
   font-size: 5.5rem;
 }
 
 @media (max-width: 768px) {
-  .youWin .winner:after {
+  .youWin .winnerplayerO:after {
+    font-size: 2.5rem;
+    line-height: 5.25rem;
+    left: 20%;
+  }
+}
+
+.youWin .winnerplayerX {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.youWin .winnerplayerX:after {
+  position: absolute;
+  content: '\1F9D9';
+  font-size: 5.5rem;
+}
+
+@media (max-width: 768px) {
+  .youWin .winnerplayerX:after {
     font-size: 2.5rem;
     line-height: 5.25rem;
     left: 20%;
