@@ -13,10 +13,12 @@ function handleClick(event) {
     let square = event.target;
     let position = square.id;
 
+    let div = document.querySelector(".background");
+
     if (handleMove(position)) {        
         setTimeout(() => {
-            alert("O jogo acabou!")
-        }, 10);
+            div.style.display = 'flex';
+        }, 15);
     };
     updateSquare(position);
 }
@@ -26,3 +28,4 @@ function updateSquare(position) {
     let symbol = board[position];
     square.innerHTML = `<div class='${symbol}'></div>`
 }
+

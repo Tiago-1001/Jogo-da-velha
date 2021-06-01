@@ -106,4 +106,87 @@ h1 {
     left: 20%;
   }
 }
+
+.background {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.youWin {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  width: 20rem;
+  height: 20rem;
+  background: #333333;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.youWin p {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 75%;
+}
+
+.youWin .winner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.youWin .winner:after {
+  position: absolute;
+  content: '\1F9DB';
+  font-size: 5.5rem;
+}
+
+@media (max-width: 768px) {
+  .youWin .winner:after {
+    font-size: 2.5rem;
+    line-height: 5.25rem;
+    left: 20%;
+  }
+}
+
+.youWin .playAgain {
+  position: absolute;
+  top: 80%;
+  padding: .5rem .7rem .6rem .5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 35px;
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
