@@ -67,11 +67,11 @@ h1 {
   }
 }
 
-.PlayerO {
+.playerO {
   position: relative;
 }
 
-.PlayerO:after {
+.playerO:after {
   position: absolute;
   content: '\1F9DB';
   font-size: 4.5rem;
@@ -80,18 +80,18 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .PlayerO:after {
+  .playerO:after {
     font-size: 2.5rem;
     line-height: 5.25rem;
     left: 20%;
   }
 }
 
-.PlayerX {
+.playerX {
   position: relative;
 }
 
-.PlayerX:after {
+.playerX:after {
   position: absolute;
   content: '\1F9D9';
   font-size: 4.5rem;
@@ -100,7 +100,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .PlayerX:after {
+  .playerX:after {
     font-size: 2.5rem;
     line-height: 5.25rem;
     left: 20%;
