@@ -16,7 +16,7 @@ function handleClick(event) {
     if (handleMove(position)) {        
         setTimeout(() => {
             alert("O jogo acabou!")
-        }, 5);
+        }, 10);
     };
     updateSquare(position);
 }

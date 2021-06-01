@@ -1,7 +1,9 @@
 let board = ['', '', '', '', '', '', '', '', '',];
 let playerTime = 0;
-let symbols = ['playerO', 'playerX'];
 let gameOver = false;
+
+let symbols = ['playerO', 'playerX'];
+
 let winState = [
     [0, 1, 2],
     [3, 4, 5],
@@ -17,7 +19,6 @@ function handleMove(position) {
     if (gameOver) {
         return;
     }
-
     if (board[position] === '') {
         board[position] = symbols[playerTime];
 
@@ -27,7 +28,6 @@ function handleMove(position) {
             playerTime = (playerTime == 0) ? 1 : 0;
         }
     }
-
     return gameOver;
 }
 
