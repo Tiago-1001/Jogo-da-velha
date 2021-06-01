@@ -39,6 +39,67 @@ h1 {
     }
 }
 
+.players {
+    display: flex;
+    z-index: 1;
+
+   h2 {
+       position: absolute;
+
+        &:first-of-type {
+            top: 30%;
+            right: 68%
+        }
+
+        &:last-of-type {
+            top: 30%;
+            left: 68%
+        }
+   }
+
+    .playerOne {
+        position: absolute;
+        top: 35%;
+        right: 67%;
+
+        &:after {
+            content: '\1F9DB';
+            font-size: 7.5rem;
+        }
+
+        @media (max-width: 768px) {
+
+
+            &:after {
+                font-size: 2.5rem;
+                line-height: 5.25rem;
+            }
+        }
+
+    }
+
+    .playerTwo {
+        position: absolute;
+        top: 35%;
+        left: 66%;
+
+        &:after {
+            content: '\1F9D9';
+            font-size: 7.5rem;
+        }
+
+        @media (max-width: 768px) {
+
+
+            &:after {
+                font-size: 2.5rem;
+                line-height: 5.25rem;
+                left: 20%;
+            }
+        }
+    }
+}
+
 .square {
     width: 8.25rem;
     height: 8.25rem;
@@ -47,6 +108,7 @@ h1 {
     display: inline-block;
     position: relative;
     backdrop-filter: blur(15px);
+    z-index: 2;
 
     @media (max-width: 768px) {
         width: 5.5rem;
@@ -101,12 +163,12 @@ h1 {
 
 .background {
     display: none;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 3;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -120,14 +182,14 @@ h1 {
     width: 20rem;
     height: 20rem;
     background: rgb(51, 51, 51);
-    z-index: 2;
+    z-index: 4;
     border-radius: 50%;
 
     p {
         font-size: 1.5rem;
         position: absolute;
         bottom: 75%;
-       
+
     }
 
     .winnerplayerO {
@@ -136,23 +198,23 @@ h1 {
         align-items: center;
         justify-content: center;
         margin-bottom: 1rem;
-    
+
         &:after {
             position: absolute;
             content: '\1F9DB';
             font-size: 5.5rem;
         }
-    
+
         @media (max-width: 768px) {
-    
-    
+
+
             &:after {
                 font-size: 2.5rem;
                 line-height: 5.25rem;
                 left: 20%;
             }
         }
-    
+
     }
 
     .winnerplayerX {
@@ -161,23 +223,23 @@ h1 {
         align-items: center;
         justify-content: center;
         margin-bottom: 1rem;
-    
+
         &:after {
             position: absolute;
             content: '\1F9D9';
             font-size: 5.5rem;
         }
-    
+
         @media (max-width: 768px) {
-    
-    
+
+
             &:after {
                 font-size: 2.5rem;
                 line-height: 5.25rem;
                 left: 20%;
             }
         }
-    
+
     }
 
     .playAgain {
