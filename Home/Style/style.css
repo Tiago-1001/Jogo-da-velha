@@ -66,6 +66,7 @@ h1 {
 }
 
 .players h2:last-of-type {
+  display: none;
   top: 30%;
   left: 68%;
 }
@@ -89,6 +90,7 @@ h1 {
 }
 
 .players .playerTwo {
+  display: none;
   position: absolute;
   top: 35%;
   left: 66%;

@@ -25,7 +25,8 @@ function handleMove(position) {
         gameOver = isWin();
 
         if (!gameOver) {
-            playerTime = (playerTime == 0) ? 1 : 0;
+            playerTime = (playerTime === 0) ? 1 : 0;
+            
         }
     }
     return gameOver;

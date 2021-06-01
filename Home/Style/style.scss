@@ -52,6 +52,7 @@ h1 {
         }
 
         &:last-of-type {
+            display: none;
             top: 30%;
             left: 68%
         }
@@ -69,16 +70,15 @@ h1 {
 
         @media (max-width: 768px) {
 
-
             &:after {
                 font-size: 2.5rem;
                 line-height: 5.25rem;
             }
         }
-
     }
 
     .playerTwo {
+        display: none;
         position: absolute;
         top: 35%;
         left: 66%;
