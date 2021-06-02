@@ -43,7 +43,7 @@ h1 {
 
 @media (max-width: 768px) {
   h1 {
-    top: 7%;
+    top: 10%;
     font-size: 3rem;
     left: 10%;
   }
