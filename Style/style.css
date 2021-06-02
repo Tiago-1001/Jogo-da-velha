@@ -65,10 +65,24 @@ h1 {
   right: 68%;
 }
 
+@media (max-width: 768px) {
+  .players h2:first-of-type {
+    top: 70%;
+    right: 35%;
+  }
+}
+
 .players h2:last-of-type {
   display: none;
   top: 30%;
   left: 68%;
+}
+
+@media (max-width: 768px) {
+  .players h2:last-of-type {
+    top: 70%;
+    left: 35%;
+  }
 }
 
 .players .playerOne {
@@ -84,7 +98,18 @@ h1 {
 
 @media (max-width: 768px) {
   .players .playerOne:after {
-    font-size: 2.5rem;
+    top: 70%;
+    left: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .players .playerOne {
+    top: 74%;
+    left: 39%;
+  }
+  .players .playerOne:after {
+    font-size: 3.5rem;
     line-height: 5.25rem;
   }
 }
@@ -102,14 +127,33 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .players .playerTwo {
+    top: 74%;
+    left: 39%;
+  }
   .players .playerTwo:after {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     line-height: 5.25rem;
-    left: 20%;
   }
 }
 
-.square {
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .square {
   width: 8.25rem;
   height: 8.25rem;
   background-color: rgba(255, 255, 255, 0.05);
@@ -122,17 +166,17 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .square {
+  .container .square {
     width: 5.5rem;
     height: 5.5rem;
   }
 }
 
-.playerO {
+.container .playerO {
   position: relative;
 }
 
-.playerO:after {
+.container .playerO:after {
   position: absolute;
   content: '\1F9DB';
   font-size: 4.5rem;
@@ -141,18 +185,18 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .playerO:after {
+  .container .playerO:after {
     font-size: 2.5rem;
     line-height: 5.25rem;
     left: 20%;
   }
 }
 
-.playerX {
+.container .playerX {
   position: relative;
 }
 
-.playerX:after {
+.container .playerX:after {
   position: absolute;
   content: '\1F9D9';
   font-size: 4.5rem;
@@ -161,7 +205,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .playerX:after {
+  .container .playerX:after {
     font-size: 2.5rem;
     line-height: 5.25rem;
     left: 20%;
@@ -207,6 +251,13 @@ h1 {
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+  .youWin {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
 .youWin p {
   font-size: 1.5rem;
   position: absolute;
@@ -235,9 +286,8 @@ h1 {
 
 @media (max-width: 768px) {
   .youWin .winnerplayerO:after {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     line-height: 5.25rem;
-    left: 20%;
   }
 }
 
@@ -263,9 +313,8 @@ h1 {
 
 @media (max-width: 768px) {
   .youWin .winnerplayerX:after {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     line-height: 5.25rem;
-    left: 20%;
   }
 }
 
@@ -291,9 +340,8 @@ h1 {
 
 @media (max-width: 768px) {
   .youWin .winnerOldWoman:after {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     line-height: 5.25rem;
-    left: 20%;
   }
 }
 
@@ -305,5 +353,26 @@ h1 {
   border-radius: 35px;
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .youWin .playAgain {
+    padding: .4rem .6rem .5rem .4rem;
+    top: 78%;
+    font-size: .8rem;
+  }
+}
+
+footer p {
+  font-size: 1rem;
+  position: absolute;
+  left: 47%;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  footer p {
+    left: 35%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

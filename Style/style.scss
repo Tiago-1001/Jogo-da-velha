@@ -43,20 +43,32 @@ h1 {
     display: flex;
     z-index: 1;
 
-   h2 {
-       position: absolute;
+    h2 {
+        position: absolute;
+
+
 
         &:first-of-type {
             top: 30%;
-            right: 68%
+            right: 68%;
+
+            @media (max-width: 768px) {
+                top: 70%;
+                right: 35%;
+            }
         }
 
         &:last-of-type {
             display: none;
             top: 30%;
-            left: 68%
+            left: 68%;
+
+            @media (max-width: 768px) {
+                top: 70%;
+                left: 35%;
+            }
         }
-   }
+    }
 
     .playerOne {
         position: absolute;
@@ -66,12 +78,19 @@ h1 {
         &:after {
             content: '\1F9DB';
             font-size: 7.5rem;
+
+            @media (max-width: 768px) {
+                top: 70%;
+                left: 35%;
+            }
         }
 
         @media (max-width: 768px) {
+            top: 74%;
+            left: 39%;
 
             &:after {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
                 line-height: 5.25rem;
             }
         }
@@ -89,6 +108,51 @@ h1 {
         }
 
         @media (max-width: 768px) {
+            top: 74%;
+            left: 39%;
+
+            &:after {
+                font-size: 3.5rem;
+                line-height: 5.25rem;
+            }
+        }
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .square {
+        width: 8.25rem;
+        height: 8.25rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid gray;
+        display: inline-block;
+        position: relative;
+        backdrop-filter: blur(15px);
+        z-index: 2;
+
+        @media (max-width: 768px) {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+    }
+
+    .playerO {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '\1F9DB';
+            font-size: 4.5rem;
+            line-height: 8.25rem;
+            left: 15%;
+        }
+
+        @media (max-width: 768px) {
 
 
             &:after {
@@ -98,67 +162,29 @@ h1 {
             }
         }
     }
-}
 
-.square {
-    width: 8.25rem;
-    height: 8.25rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid gray;
-    display: inline-block;
-    position: relative;
-    backdrop-filter: blur(15px);
-    z-index: 2;
-
-    @media (max-width: 768px) {
-        width: 5.5rem;
-        height: 5.5rem;
-    }
-}
-
-.playerO {
-    position: relative;
-
-    &:after {
-        position: absolute;
-        content: '\1F9DB';
-        font-size: 4.5rem;
-        line-height: 8.25rem;
-        left: 15%;
-    }
-
-    @media (max-width: 768px) {
-
+    .playerX {
+        position: relative;
 
         &:after {
-            font-size: 2.5rem;
-            line-height: 5.25rem;
-            left: 20%;
+            position: absolute;
+            content: '\1F9D9';
+            font-size: 4.5rem;
+            line-height: 8.25rem;
+            left: 10%;
         }
-    }
-}
 
-.playerX {
-    position: relative;
-
-    &:after {
-        position: absolute;
-        content: '\1F9D9';
-        font-size: 4.5rem;
-        line-height: 8.25rem;
-        left: 10%;
-    }
-
-    @media (max-width: 768px) {
+        @media (max-width: 768px) {
 
 
-        &:after {
-            font-size: 2.5rem;
-            line-height: 5.25rem;
-            left: 20%;
+            &:after {
+                font-size: 2.5rem;
+                line-height: 5.25rem;
+                left: 20%;
+            }
         }
-    }
 
+    }
 }
 
 .background {
@@ -185,6 +211,11 @@ h1 {
     z-index: 4;
     border-radius: 50%;
 
+    @media (max-width: 768px) {
+        width: 16rem;
+        height: 16rem;
+    }
+
     p {
         font-size: 1.5rem;
         position: absolute;
@@ -209,9 +240,8 @@ h1 {
 
 
             &:after {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
                 line-height: 5.25rem;
-                left: 20%;
             }
         }
 
@@ -234,9 +264,8 @@ h1 {
 
 
             &:after {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
                 line-height: 5.25rem;
-                left: 20%;
             }
         }
 
@@ -259,9 +288,8 @@ h1 {
 
 
             &:after {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
                 line-height: 5.25rem;
-                left: 20%;
             }
         }
 
@@ -275,5 +303,24 @@ h1 {
         border-radius: 35px;
         background-color: rgba(255, 255, 255, 0.150);
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            padding: .4rem .6rem .5rem .4rem;
+            top: 78%;
+            font-size: .8rem;
+        }
+    }
+}
+
+footer {
+    p {
+        font-size: 1rem;
+        position: absolute;
+        left: 47%;
+        bottom: 0;
+
+        @media (max-width: 768px) {
+            left: 35%
+        }
     }
 }
