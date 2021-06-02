@@ -1,16 +1,25 @@
-function winner(position) {
-    let div = document.querySelector(".background");
+let p = document.querySelector(".pH1")
+let div = document.querySelector(".background");
+let emoji = document.querySelector("#winner")
 
+function winner() {
     div.style.display = "flex";
+    
+    p.innerHTML = "O vencedor foi:"
 
     if (playerTime === 0) {
-        document.querySelector('#winner')
-            .classList.add('winnerplayerO');
+        emoji.classList.add('winnerplayerO');
     } else {
-        document.querySelector('#winner')
-            .classList.add('winnerplayerX');
+        emoji.classList.add('winnerplayerX');
     }
+}
 
+function tie() {
+    div.style.display = "flex";
+    p.innerHTML = "Deu velha :)"
+
+    emoji.classList.add('winnerOldWoman');
+   
 }
 
 function playAgain() {
