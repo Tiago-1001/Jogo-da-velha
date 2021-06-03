@@ -3,7 +3,7 @@ let playerTime = 0;
 let gameOver = false;
 let result = '';
 
-let symbols = ['playerO', 'playerX'];
+let symbols = ["playerO", "playerX"];
 
 let winState = [
     [0, 1, 2],
@@ -48,10 +48,12 @@ function isWin() {
             board[positionOne] === board[positionThree] &&
             board[positionOne] !== '') {
                 
-            winner();
+            result = board[positionOne];
+            return [true, result];
         }
-        if (!hasEmpty) {
-            tie();
+        else if (!hasEmpty) {
+            result = "tie";
+            return [true, result];
         }
     }
     return false;

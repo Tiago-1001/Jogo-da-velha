@@ -13,7 +13,7 @@ function handleClick(event) {
 
     if (handleMove(position)) {        
         setTimeout(() => {
-            winner();
+            winner(result);
         }, 15);
     };
     updateSquare(position);
