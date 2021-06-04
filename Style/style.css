@@ -101,19 +101,19 @@ h1 {
   filter: none;
 }
 
-.container #settings .pickH {
+.container #settings .pickHuman {
   background-image: url(../Images/sh.png);
 }
 
-.container #settings .pickR {
+.container #settings .pickRobot {
   background-image: url(../Images/robot.png);
 }
 
-.container #settings .pickO {
+.container #settings .pickPlayerO {
   background-image: url(../Images/playerO.png);
 }
 
-.container #settings .pickX {
+.container #settings .pickPlayerX {
   background-image: url(../Images/playerX.png);
 }
 
@@ -360,7 +360,6 @@ footer p {
 }
 
 .butterfly {
-  display: none;
   position: absolute;
   top: 125%;
   left: 87%;

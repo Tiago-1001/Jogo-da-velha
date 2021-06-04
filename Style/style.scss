@@ -81,20 +81,19 @@ h1 {
             }
         }
 
-        .pickH {
+        .pickHuman {
             background-image: url(../Images/sh.png);
         }
 
-        .pickR {
+        .pickRobot {
             background-image: url(../Images/robot.png);
-
         }
 
-        .pickO {
+        .pickPlayerO {
             background-image: url(../Images/playerO.png);
         }
 
-        .pickX {
+        .pickPlayerX {
             background-image: url(../Images/playerX.png);
         }
 
@@ -317,7 +316,6 @@ footer {
 
 
 .butterfly {
-    display: none;
     position: absolute;
     top: 125%;
     left: 87%;
