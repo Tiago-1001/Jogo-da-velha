@@ -8,43 +8,95 @@
     <title>Jogo da velha</title>
 </head>
 <body>
-    <h1>Jogo da Velha</h1>
-    <div class="players">
-        
-        <h2 class="player1">Jogador 1:</h2>
-        <div class="playerOne"></div>
-        
-        <h2 class="player2">Jogador 2:</h2>
-        <div class="playerTwo"></div>
-    </div>
-    <div class="container">
-        <div>
-            <div id="0" class="square"></div>
-            <div id="1" class="square"></div>
-            <div id="2" class="square"></div>
-        </div>
-        <div>
-            <div id="3" class="square"></div>
-            <div id="4" class="square"></div>
-            <div id="5" class="square"></div>
-        </div>
-        <div>
-            <div id="6" class="square"></div>
-            <div id="7" class="square"></div>
-            <div id="8" class="square"></div>
-        </div>
-    </div>
     <div class="background">
         <div class="youWin">
             <p class="pH1"></p>
             <div id="winner"></div>
-            <button class="playAgain" onclick="playAgain();">Jogar noavamente</button>
+            <button class="playAgain" onclick="playAgain();">Jogar novamente</button>
+        </div>
+    </div>
+    <h1>Jogo da Velha</h1>
+    <div class="circle"></div>
+    <div class="container">
+        <div id="settings"> <!-- game settings -->
+
+            <div class="opponent-selector"> <!-- Human or Robot -->
+
+                <h2 class="subHeaders">Adversário:</h2>
+
+                <div> <!-- Human -->
+                    <input id="sel-h" type="radio" name="selectOpponent" value="0">
+                    <label class="selection1 pickH" for="sel-h" data-title="Você vs Você"></label>
+                </div>
+            
+                <div> <!-- Robot -->
+                    <input id="sel-r" type="radio" name="selectOpponent" value="1">
+                    <label class="selection1 pickR" for="sel-r" data-title="Você não consegue me ganhar!"></label>
+                </div>
+
+            </div>
+            
+            <div class="symbol-selector"> <!-- Nought or Cross -->
+
+                <h2 class="subHeaders">Símbolo:</h2>
+
+                <div> <!-- Nought -->
+                    <input id="sel-o" type="radio" name="selectSymbol" value="0">
+                    <label class="selection2 pickX" for="sel-o"></label>
+                </div>
+
+                <div> <!-- Cross -->
+                    <input id="sel-x" type="radio" name="selectSymbol" value="1">
+                    <label class="selection2 pickO" for="sel-x"></label>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="frame">
+            <div>
+                <div id="0" class="square"></div>
+                <div id="1" class="square"></div>
+                <div id="2" class="square"></div>
+            </div>
+            <div>
+                <div id="3" class="square"></div>
+                <div id="4" class="square"></div>
+                <div id="5" class="square"></div>
+            </div>
+            <div>
+                <div id="6" class="square"></div>
+                <div id="7" class="square"></div>
+                <div id="8" class="square"></div>
+            </div>
         </div>
     </div>
 
-    <footer><p>© <a href="https://github.com/Tiago-1001">Tiago Farias</a></p></footer>
+    <div class="butterfly">
+        <div class="body">
+          <div class="head"></div>
+        </div>
+        <div class="wing top">
+          <i></i>
+          <i></i>
+        </div>
+        <div class="wing right">
+          <i></i>
+          <i></i>
+        </div>
+        <div class="wing bottom">
+          <i></i>
+          <i></i>
+        </div>
+        <div class="wing left">
+          <i></i>
+          <i></i>
+        </div>
 
-    <script src="./Components/Interface/turn.js"></script>
+    </div>
+    
+    <footer><p>Feito por <a href="https://github.com/Tiago-1001">Tiago Farias</a></p></footer>
+
     <script src="./Components/Game/script.js"></script>
     <script src="./Components/Interface/script.js"></script>
     <script src="./Components/Interface/popUp.js"></script>
