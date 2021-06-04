@@ -3,7 +3,10 @@ let playerTime = 0;
 let gameOver = false;
 let result = '';
 
-let symbols = ["playerO", "playerX"];
+let selectAdversary;
+let selectSymbol;
+
+let symbols = ["playerO", "playerO", "playerX"];
 
 let winState = [
     [0, 1, 2],
@@ -18,18 +21,52 @@ let winState = [
 
 
 function handleMove(position) {
-    if (gameOver) {
-        return;
+    if (gameOver) return;
+
+    selectAdversary = document.querySelector('input[name="selectOpponent"]:checked').value; // human = 0 / robot = 1
+    selectSymbol = document.querySelector('input[name="selectSymbol"]:checked').value; // nought = 0 / cross = 1
+
+    if (selectSymbol === "0" && playerTime === 0) {
+        playerTime = 1;
     }
+    if (selectSymbol === "1" && playerTime === 0) {
+        playerTime = 2;
+    }
+
     if (board[position] === '') {
         board[position] = symbols[playerTime];
     
+        console.log(playerTime)
         gameOver = isWin();
 
         if (!gameOver) {
-            playerTime = (playerTime === 0) ? 1 : 0;
-            
+            playerTime = (playerTime === 1) ? 2 : 1;
+            console.log(playerTime)
         }
+    }
+    return gameOver;
+}
+
+function robotMoviment() {
+
+    if (gameOver) return;
+
+    let robotPlay;
+    do {
+        robotPlay = Math.floor(Math.random() * 9);
+    }
+    while (board[robotPlay] !== '');
+
+    let robotSquare = document.getElementById(robotPlay.toString());
+    board[robotPlay] = symbols[playerTime];
+    robotSquare.innerHTML = `<div class="${board[robotPlay]}"></div>`;
+
+        console.log(selectSymbol, selectAdversary)
+
+    
+    gameOver = isWin();
+    if (!gameOver) {
+        playerTime == 1 ? playerTime = 2 : playerTime = 1;
     }
     return gameOver;
 }
@@ -51,7 +88,7 @@ function isWin() {
             result = board[positionOne];
             return [true, result];
         }
-        else if (!hasEmpty) {
+        if (!hasEmpty) {
             result = "tie";
             return [true, result];
         }

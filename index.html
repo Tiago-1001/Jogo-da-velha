@@ -18,35 +18,35 @@
     <h1>Jogo da Velha</h1>
     <div class="circle"></div>
     <div class="container">
-        <div id="settings"> <!-- game settings -->
+        <div id="settings">
 
-            <div class="opponent-selector"> <!-- Human or Robot -->
+            <div class="opponent-selector">
 
                 <h2 class="subHeaders">Adversário:</h2>
 
-                <div> <!-- Human -->
-                    <input id="human" type="radio" name="selectOpponent" value="0">
+                <div>
+                    <input id="human" type="radio" class="selectOpponent" name="selectOpponent" value="0">
                     <label class="selection1 pickHuman" for="human" data-title="Você vs Você"></label>
                 </div>
             
-                <div> <!-- Robot -->
-                    <input id="robot" type="radio" name="selectOpponent" value="1">
+                <div>
+                    <input id="robot" type="radio" class="selectOpponent" name="selectOpponent" value="1">
                     <label class="selection2 pickRobot" for="robot" data-title="Você não consegue me ganhar!"></label>
                 </div>
 
             </div>
             
-            <div class="symbol-selector"> <!-- Nought or Cross -->
+            <div class="symbol-selector">
 
                 <h2 class="subHeaders">Símbolo:</h2>
 
-                <div> <!-- Nought -->
-                    <input id="symbolX" type="radio" name="selectSymbol" value="0">
+                <div>
+                    <input id="symbolX" type="radio" class="selectSymbol" name="selectSymbol" value="1">
                     <label class="selection1 pickPlayerX" for="symbolX"></label>
                 </div>
 
-                <div> <!-- Cross -->
-                    <input id="symbolO" type="radio" name="selectSymbol" value="1">
+                <div> 
+                    <input id="symbolO" type="radio" class="selectSymbol" name="selectSymbol" value="0">
                     <label class="selection2 pickPlayerO" for="symbolO"></label>
                 </div>
 
