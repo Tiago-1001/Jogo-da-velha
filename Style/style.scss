@@ -14,6 +14,10 @@ body {
     background-color: #222;
     text-align: center;
     position: relative;
+    
+    @media (max-width: 768px) {
+      max-height: 100vh
+    }
 }
 
 .circle {
@@ -22,7 +26,11 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(#c3f00d, #0df03a);
-    clip-path: circle(18%  at 50% 45%);
+    clip-path: circle(15%  at 50% 45%);
+
+    @media (max-width: 768px) {
+      clip-path: circle(20% at 50% 30%);
+    }
 }
 
 h1 {
@@ -31,15 +39,18 @@ h1 {
     font-size: 5rem;
 
     @media (max-width: 768px) {
-        top: 10%;
-        font-size: 3rem;
-        left: 10%;
+        font-size: 2rem;
     }
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 500px 1fr;
+    grid-template-columns: 1fr 31.25rem 1fr;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
 
     #settings {
@@ -55,6 +66,12 @@ h1 {
             flex-wrap: wrap;
             justify-content: space-around;
             margin: 0 4.2rem;
+
+            @media (max-width: 768px) {
+              max-width: 50%;
+              margin: 0;
+              margin-left: 6rem;
+            }
         }
 
         .subHeaders {
@@ -66,7 +83,6 @@ h1 {
 
         }
 
-        /***** OPPONENT / SYMBOL SELECTORS *****/
         input {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -97,12 +113,10 @@ h1 {
             background-image: url(../Images/playerX.png);
         }
 
-        
-
         .selection1,
         .selection2 {
-            height: 70px;
-            width: 70px;
+            height: 4.3rem;
+            width: 4.3rem;
             cursor: pointer;
             background-size: contain;
             background-repeat: no-repeat;
@@ -122,9 +136,13 @@ h1 {
                 -moz-filter: brightness(1) grayscale(0) opacity(1);
                 filter: brightness(1) grayscale(0) opacity(1);
             }
+
+            @media (max-width: 768px) {
+              height: 3.1rem;
+              width: 3.1rem;
+            }
         }
 
-        /***** DATA-TITLE *****/
         [data-title] {
             position: relative;
 
@@ -169,26 +187,38 @@ h1 {
 
         .playerO {
             background-image: url(../Images/playerO.png);
-            height: 70px;
-            width: 70px;
+            height: 4.3rem;
+            width: 4.3rem;
             background-size: contain;
             background-repeat: no-repeat;
             display: inline-block;
             position: absolute;
             top: 25%;
             right: 25%;
+
+            @media (max-width: 768px) {
+              height: 3.5rem;
+              top: 18%;
+              right: 5%;
+            }
         }
 
         .playerX {
             background-image: url(../Images/playerX.png);
-            height: 70px;
-            width: 70px;
+            height: 4.3rem;
+            width: 4.3rem;
             background-size: contain;
             background-repeat: no-repeat;
             display: inline-block;
             position: absolute;
             top: 25%;
             right: 25%;
+
+            @media (max-width: 768px) {
+              height: 3.5rem;
+              top: 18%;
+              right: 5%;
+            }
         }
     }
 }
@@ -225,18 +255,15 @@ h1 {
         height: 16rem;
     }
 
-    p {
-        font-size: 1.5rem;
-        position: absolute;
-        bottom: 75%;
-
-    }
-
     .pH1 {
         position: absolute;
         font-size: 2rem;
         top: 15%;
-    }
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+      }
 
     .winnerplayerO {
         background-image: url(../Images/playerO.png);
@@ -245,6 +272,11 @@ h1 {
         background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
+
+        @media (max-width: 786px) {
+          height: 5rem;
+          width: 5rem;
+        }
     }
 
     .winnerplayerX {
@@ -254,6 +286,11 @@ h1 {
         background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
+
+        @media (max-width: 786px) {
+          height: 5rem;
+          width: 5rem;
+        }
     }
 
     .winnerOldWoman {
@@ -270,8 +307,6 @@ h1 {
         }
 
         @media (max-width: 768px) {
-
-
             &:after {
                 font-size: 3.5rem;
                 line-height: 5.25rem;
@@ -299,14 +334,21 @@ h1 {
 }
 
 footer {
+
+  @media (max-width: 768px) {
+    display: block;
+    height: 3.1rem;
+  }
     p {
         font-size: 1rem;
         position: absolute;
         left: 47%;
-        bottom: -50%;
+        top: 145%;
+        height: 19px;
 
         @media (max-width: 768px) {
-            left: 35%
+           top: 100%;
+           left: 30%;
         }
     }
 }
@@ -321,6 +363,11 @@ footer {
     animation: flutter 0.3s infinite;
     width: 345px;
     height: 215px;
+
+    @media (max-width: 846px) {
+      display: none;
+    }
+
     .body {
       position: absolute;
       z-index: 3;

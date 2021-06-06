@@ -14,6 +14,12 @@ body {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  body {
+    max-height: 100vh;
+  }
+}
+
 .circle {
   content: '';
   position: absolute;
@@ -21,8 +27,15 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#c3f00d), to(#0df03a));
   background: linear-gradient(#c3f00d, #0df03a);
-  -webkit-clip-path: circle(18% at 50% 45%);
-          clip-path: circle(18% at 50% 45%);
+  -webkit-clip-path: circle(15% at 50% 45%);
+          clip-path: circle(15% at 50% 45%);
+}
+
+@media (max-width: 768px) {
+  .circle {
+    -webkit-clip-path: circle(20% at 50% 30%);
+            clip-path: circle(20% at 50% 30%);
+  }
 }
 
 h1 {
@@ -33,17 +46,27 @@ h1 {
 
 @media (max-width: 768px) {
   h1 {
-    top: 10%;
-    font-size: 3rem;
-    left: 10%;
+    font-size: 2rem;
   }
 }
 
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 500px 1fr;
-      grid-template-columns: 1fr 500px 1fr;
+  -ms-grid-columns: 1fr 31.25rem 1fr;
+      grid-template-columns: 1fr 31.25rem 1fr;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .container #settings {
@@ -57,8 +80,6 @@ h1 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 3rem;
-  /***** OPPONENT / SYMBOL SELECTORS *****/
-  /***** DATA-TITLE *****/
 }
 
 .container #settings .opponent-selector,
@@ -75,6 +96,15 @@ h1 {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 0 4.2rem;
+}
+
+@media (max-width: 768px) {
+  .container #settings .opponent-selector,
+  .container #settings .symbol-selector {
+    max-width: 50%;
+    margin: 0;
+    margin-left: 6rem;
+  }
 }
 
 .container #settings .subHeaders {
@@ -119,8 +149,8 @@ h1 {
 
 .container #settings .selection1,
 .container #settings .selection2 {
-  height: 70px;
-  width: 70px;
+  height: 4.3rem;
+  width: 4.3rem;
   cursor: pointer;
   background-size: contain;
   background-repeat: no-repeat;
@@ -139,6 +169,14 @@ h1 {
   -webkit-filter: brightness(1) grayscale(0) opacity(1);
   -moz-filter: brightness(1) grayscale(0) opacity(1);
   filter: brightness(1) grayscale(0) opacity(1);
+}
+
+@media (max-width: 768px) {
+  .container #settings .selection1,
+  .container #settings .selection2 {
+    height: 3.1rem;
+    width: 3.1rem;
+  }
 }
 
 .container #settings [data-title] {
@@ -197,8 +235,8 @@ h1 {
 
 .container .frame .playerO {
   background-image: url(../Images/playerO.png);
-  height: 70px;
-  width: 70px;
+  height: 4.3rem;
+  width: 4.3rem;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
@@ -207,16 +245,32 @@ h1 {
   right: 25%;
 }
 
+@media (max-width: 768px) {
+  .container .frame .playerO {
+    height: 3.5rem;
+    top: 18%;
+    right: 5%;
+  }
+}
+
 .container .frame .playerX {
   background-image: url(../Images/playerX.png);
-  height: 70px;
-  width: 70px;
+  height: 4.3rem;
+  width: 4.3rem;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
   top: 25%;
   right: 25%;
+}
+
+@media (max-width: 768px) {
+  .container .frame .playerX {
+    height: 3.5rem;
+    top: 18%;
+    right: 5%;
+  }
 }
 
 .background {
@@ -267,16 +321,16 @@ h1 {
   }
 }
 
-.youWin p {
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: 75%;
-}
-
 .youWin .pH1 {
   position: absolute;
   font-size: 2rem;
   top: 15%;
+}
+
+@media (max-width: 768px) {
+  .youWin .pH1 {
+    font-size: 1.5rem;
+  }
 }
 
 .youWin .winnerplayerO {
@@ -288,6 +342,13 @@ h1 {
   display: inline-block;
 }
 
+@media (max-width: 786px) {
+  .youWin .winnerplayerO {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
 .youWin .winnerplayerX {
   background-image: url(../Images/playerX.png);
   height: 6.25rem;
@@ -295,6 +356,13 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
+}
+
+@media (max-width: 786px) {
+  .youWin .winnerplayerX {
+    height: 5rem;
+    width: 5rem;
+  }
 }
 
 .youWin .winnerOldWoman {
@@ -344,16 +412,25 @@ h1 {
   }
 }
 
+@media (max-width: 768px) {
+  footer {
+    display: block;
+    height: 3.1rem;
+  }
+}
+
 footer p {
   font-size: 1rem;
   position: absolute;
   left: 47%;
-  bottom: -50%;
+  top: 145%;
+  height: 19px;
 }
 
 @media (max-width: 768px) {
   footer p {
-    left: 35%;
+    top: 100%;
+    left: 30%;
   }
 }
 
@@ -367,6 +444,12 @@ footer p {
           animation: flutter 0.3s infinite;
   width: 345px;
   height: 215px;
+}
+
+@media (max-width: 846px) {
+  .butterfly {
+    display: none;
+  }
 }
 
 .butterfly .body {
