@@ -9,18 +9,35 @@ function playAgain() {
 
 function winner(result) {
     div.style.display = "flex";
+    
+    selectSymbol === 0 ? humanSymbol = 'playerO' : humanSymbol = 'playerX';
+    selectSymbol === 0 ? robotSymbol = 'playerX' : robotSymbol = 'playerO';
 
-    if (result === "playerO") {
+
+    if (selectAdversary == "0" && result === "playerX") {
+        p.innerHTML = "O vencedor foi:";
+
+        emoji.classList.add('winnerplayerX');
+    }
+
+    if (selectAdversary == "0" && result === "playerO") {
         p.innerHTML = "O vencedor foi:";
 
         emoji.classList.add('winnerplayerO');
     }
 
-    if (result === "playerX") {
+    if (selectAdversary == "1" && result === "playerX") {
         p.innerHTML = "O vencedor foi:";
 
         emoji.classList.add('winnerplayerX');
     }
+    
+    if (selectAdversary == "1" && result === "playerO") {
+        p.innerHTML = "O vencedor foi:";
+
+        emoji.classList.add('winnerplayerO');
+    }
+
     if (result === "tie") {
         p.innerHTML = "Deu velha :)"
 
