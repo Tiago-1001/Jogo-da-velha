@@ -29,7 +29,7 @@ body {
     clip-path: circle(15%  at 50% 45%);
 
     @media (max-width: 768px) {
-      clip-path: circle(20% at 50% 30%);
+      clip-path: circle(20% at 50% 22%);
     }
 }
 
@@ -169,6 +169,10 @@ h1 {
         flex-direction: column;
         margin-top: 5rem;
 
+        @media (max-width: 768px) {
+          margin-top: 1rem;
+        }
+      
         .square {
             text-align: center;
             width: 8.25rem;
@@ -334,17 +338,13 @@ h1 {
 }
 
 footer {
-
-  @media (max-width: 768px) {
-    display: block;
-    height: 3.1rem;
-  }
     p {
         font-size: 1rem;
         position: absolute;
         left: 47%;
         top: 145%;
         height: 19px;
+        margin: 0;
 
         @media (max-width: 768px) {
            top: 100%;

@@ -23,8 +23,8 @@ let winState = [
 function handleMove(position) {
     if (gameOver) return;
 
-    selectAdversary = document.querySelector('input[name="selectOpponent"]:checked').value; // human = 0 / robot = 1
-    selectSymbol = document.querySelector('input[name="selectSymbol"]:checked').value; // nought = 0 / cross = 1
+    selectAdversary = document.querySelector('input[name="selectOpponent"]:checked').value;
+    selectSymbol = document.querySelector('input[name="selectSymbol"]:checked').value;
 
     if (selectSymbol === "0" && playerTime === 0) {
         playerTime = 1;
